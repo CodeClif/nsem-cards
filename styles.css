@@ -179,7 +179,7 @@ select:focus, textarea:focus, input:focus { outline: none; border-color: var(--p
 .btn.primary { background: var(--primary); color: var(--primary-ink); }
 .btn.primary:active { background: var(--primary-press); }
 .btn.secondary { background: var(--bg); color: var(--ink); border: 2px solid var(--line); }
-.btn:disabled { opacity: .55; cursor: default; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .55; cursor: default; }
 
 .toast {
   position: fixed; left: 16px; right: 16px; bottom: calc(var(--bar-h) + 12px); z-index: 30;

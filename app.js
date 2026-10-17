@@ -668,7 +668,7 @@
       busy = false;
       $('#rec').hidden = true; $('#play').hidden = false;
       updateButtons();
-      toast('Video ready (' + (video.blob.size / 1048576).toFixed(1) + ' MB). Download or share it.');
+      toast('Video ready (' + (video.blob.size / 1048576).toFixed(1) + ' MB). Tap “Share video” to send it.');
     }).catch(function () {
       busy = false;
       $('#rec').hidden = true; $('#play').hidden = false;
@@ -693,7 +693,13 @@
   function updateButtons() {
     var vid = state.mode === 'video';
     btnMain.disabled = busy || (vid && !VIDEO_TYPE);
-    btnShare.disabled = busy || (vid && !video);
+    btnShare.disabled = busy;
+    // stays tappable before the video exists, so a tap can explain what to do
+    btnShare.setAttribute('aria-disabled', vid && !video ? 'true' : 'false');
+    // once the video is ready, sharing is the next step, so make it the main button
+    var ready = vid && !!video;
+    btnShare.classList.toggle('primary', ready); btnShare.classList.toggle('secondary', !ready);
+    btnMain.classList.toggle('primary', !ready); btnMain.classList.toggle('secondary', ready);
     if (!vid) { btnMain.textContent = 'Download'; btnShare.textContent = 'Share'; }
     else if (video) { btnMain.textContent = 'Download video'; btnShare.textContent = 'Share video'; }
     else { btnMain.textContent = busy ? 'Recording…' : 'Make 6s video'; btnShare.textContent = 'Share video'; }
@@ -712,6 +718,7 @@
     if (busy) return;
     if (state.mode === 'video') {
       if (video) shareFile(new File([video.blob], fileName(video.ext), { type: video.blob.type }));
+      else toast('Tap “Make 6s video” first. Share unlocks when the video is ready.');
       return;
     }
     // share needs a fresh tap, so skip the stamp animation and share straight away
