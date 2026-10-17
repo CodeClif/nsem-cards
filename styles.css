@@ -17,7 +17,7 @@
   --warn-bg: #FFF1D1;
   --warn-ink: #6B4500;
   --radius: 14px;
-  --bar-h: 76px;
+  --bar-h: calc(77px + env(safe-area-inset-bottom)); /* app.js replaces this with the measured height */
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -41,7 +41,7 @@ body {
   color: var(--ink);
   font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   overflow-x: hidden;
-  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom));
+  padding-bottom: var(--bar-h);
 }
 button, input, select, textarea { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
@@ -141,13 +141,15 @@ select:focus, textarea:focus, input:focus { outline: none; border-color: var(--p
 .seg input:checked + span { background: var(--primary); color: var(--primary-ink); }
 .seg input:focus-visible + span { outline: 3px solid var(--gold); outline-offset: 1px; }
 
-.symbols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
-.symbols button { font-size: 11px; overflow-wrap: anywhere; }
+/* 3 columns on phones so long names like Funtunfunefu fit on one line */
+.symbols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+@media (min-width: 440px) { .symbols { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .symbols button, .themes button {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
   min-height: 84px; padding: 8px 4px; border: 2px solid var(--line); border-radius: 12px;
   background: var(--bg); cursor: pointer; font-size: 12px; font-weight: 600; line-height: 1.15; text-align: center;
 }
+.symbols button { padding: 8px 2px; font-size: 11px; letter-spacing: -.01em; overflow-wrap: normal; word-break: normal; hyphens: none; }
 .symbols svg { width: 38px; height: 38px; fill: currentColor; }
 .symbols button[aria-checked="true"], .themes button[aria-checked="true"] {
   border-color: var(--primary); box-shadow: inset 0 0 0 2px var(--primary); color: var(--primary);
@@ -180,7 +182,7 @@ select:focus, textarea:focus, input:focus { outline: none; border-color: var(--p
 .btn:disabled { opacity: .55; cursor: default; }
 
 .toast {
-  position: fixed; left: 16px; right: 16px; bottom: calc(var(--bar-h) + 12px + env(safe-area-inset-bottom)); z-index: 30;
+  position: fixed; left: 16px; right: 16px; bottom: calc(var(--bar-h) + 12px); z-index: 30;
   max-width: 480px; margin: 0 auto; padding: 12px 16px; border-radius: 12px;
   background: #26170B; color: #FFF6E8; font-weight: 600; text-align: center; box-shadow: 0 6px 24px rgba(0,0,0,.25);
 }

@@ -680,6 +680,16 @@
   // ---------- buttons ----------
 
   var btnMain = $('#btn-main'), btnShare = $('#btn-share');
+
+  // keep the page's bottom padding equal to the fixed bar's real height
+  var bar = $('.actionbar');
+  function syncBarHeight() {
+    if (getComputedStyle(bar).position !== 'fixed') return;
+    document.documentElement.style.setProperty('--bar-h', Math.ceil(bar.getBoundingClientRect().height) + 'px');
+  }
+  syncBarHeight();
+  if (window.ResizeObserver) new ResizeObserver(syncBarHeight).observe(bar);
+  else window.addEventListener('resize', syncBarHeight);
   function updateButtons() {
     var vid = state.mode === 'video';
     btnMain.disabled = busy || (vid && !VIDEO_TYPE);
