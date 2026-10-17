@@ -1,0 +1,215 @@
+{
+  "_comment": "NEEDS REVIEW: every proverb below is marked \"review\": \"needs review\" until a Twi speaker has checked the spelling and translation. When a proverb has been checked, change its review value to \"ok\". JSON has no comments, so this note and the review field stand in for them.",
+  "proverbs": [
+    {
+      "id": 1,
+      "twi": "Sɛ wo werɛ fi na wosan kɔfa a, yenkyi.",
+      "en": "It is not wrong to go back for what you forgot.",
+      "meaning": "Learn from the past to build the future (Sankofa).",
+      "review": "needs review"
+    },
+    {
+      "id": 2,
+      "twi": "Obi nkyerɛ abofra Nyame.",
+      "en": "No one shows a child the Supreme Being.",
+      "meaning": "God's presence is plain even to a child.",
+      "review": "needs review"
+    },
+    {
+      "id": 3,
+      "twi": "Tikoro nkɔ agyina.",
+      "en": "One head does not go into council.",
+      "meaning": "Two heads are better than one; seek advice.",
+      "review": "needs review"
+    },
+    {
+      "id": 4,
+      "twi": "Dua koro gye mframa a, ebu.",
+      "en": "A lone tree that faces the wind will break.",
+      "meaning": "There is strength in unity.",
+      "review": "needs review"
+    },
+    {
+      "id": 5,
+      "twi": "Nsateaa nyinaa nnyɛ pɛ.",
+      "en": "The fingers are not all equal.",
+      "meaning": "People have different gifts and fortunes.",
+      "review": "needs review"
+    },
+    {
+      "id": 6,
+      "twi": "Abaa a wɔde bɔɔ Takyi no, ɛno ara na wɔde bɛbɔ Baah.",
+      "en": "The stick used to beat Takyi is the same one that will beat Baah.",
+      "meaning": "What happens to another can happen to you.",
+      "review": "needs review"
+    },
+    {
+      "id": 7,
+      "twi": "Kakra kakra, akokɔ nom nsuo.",
+      "en": "Little by little, the hen drinks water.",
+      "meaning": "Patience and steady effort bring results.",
+      "review": "needs review"
+    },
+    {
+      "id": 8,
+      "twi": "Wo foro dua pa a, na yɛpia wo.",
+      "en": "When you climb a good tree, you get a push.",
+      "meaning": "Good causes attract support.",
+      "review": "needs review"
+    },
+    {
+      "id": 9,
+      "twi": "Ɔkɔtɔ nwo anomaa.",
+      "en": "A crab does not give birth to a bird.",
+      "meaning": "Children take after their parents.",
+      "review": "needs review"
+    },
+    {
+      "id": 10,
+      "twi": "Hu m'ani so ma me nti na atwe mmienu nam.",
+      "en": "Because of 'blow the dust from my eye', two antelopes walk together.",
+      "meaning": "We all need each other.",
+      "review": "needs review"
+    },
+    {
+      "id": 11,
+      "twi": "Benkum dware nifa, na nifa nso dware benkum.",
+      "en": "The left hand washes the right, and the right washes the left.",
+      "meaning": "Help one another.",
+      "review": "needs review"
+    },
+    {
+      "id": 12,
+      "twi": "Obi nnim obrempɔn ahyɛase.",
+      "en": "No one knows the beginnings of a great person.",
+      "meaning": "Never despise humble beginnings.",
+      "review": "needs review"
+    },
+    {
+      "id": 13,
+      "twi": "Ahwenepa nkasa.",
+      "en": "Precious beads do not rattle.",
+      "meaning": "True worth does not need to make noise.",
+      "review": "needs review"
+    },
+    {
+      "id": 14,
+      "twi": "Nyansa nni onipa baako ti mu.",
+      "en": "Wisdom is not in one person's head.",
+      "meaning": "No one has all the answers.",
+      "review": "needs review"
+    },
+    {
+      "id": 15,
+      "twi": "Ɔba nyansafoɔ, yɛbu no bɛ, yɛnka no asɛm.",
+      "en": "A wise child is spoken to in proverbs, not in plain words.",
+      "meaning": "The wise understand without being told everything.",
+      "review": "needs review"
+    },
+    {
+      "id": 16,
+      "twi": "Akokɔ bedeɛ nim adekyeɛ, nanso ɔhwɛ akokɔnini ano.",
+      "en": "The hen knows when dawn comes, but leaves it to the cock to announce.",
+      "meaning": "Respect order and each person's role.",
+      "review": "needs review"
+    },
+    {
+      "id": 17,
+      "twi": "Akokɔ nan tia ne ba so a, ɛnkum no.",
+      "en": "When the hen steps on her chick, it does not kill it.",
+      "meaning": "A parent's correction comes from love.",
+      "review": "needs review"
+    },
+    {
+      "id": 18,
+      "twi": "Sɛ wo yɔnko abɔdwesɛ rehye a, sa nsuo bɔ wo deɛ ho.",
+      "en": "When your friend's beard is on fire, keep water by your own.",
+      "meaning": "Learn from the troubles of others.",
+      "review": "needs review"
+    },
+    {
+      "id": 19,
+      "twi": "Ɔbaa na ɔwoo ɔbarima.",
+      "en": "It is a woman who gave birth to a man.",
+      "meaning": "Honour women.",
+      "review": "needs review"
+    },
+    {
+      "id": 20,
+      "twi": "Nnipa nyinaa yɛ Nyame mma; obi nnyɛ asaase ba.",
+      "en": "All people are children of God; no one is a child of the earth.",
+      "meaning": "Every person has equal dignity.",
+      "review": "needs review"
+    },
+    {
+      "id": 21,
+      "twi": "Abofra bɔ nwa, na ɔmmɔ akyekyedeɛ.",
+      "en": "A child may crack a snail's shell, but not a tortoise's.",
+      "meaning": "Know your limits.",
+      "review": "needs review"
+    },
+    {
+      "id": 22,
+      "twi": "Obi mfa ne benkum nkyerɛ n'agya kurom.",
+      "en": "No one points to their father's village with the left hand.",
+      "meaning": "Respect your roots.",
+      "review": "needs review"
+    },
+    {
+      "id": 23,
+      "twi": "Aboa a onni dua, Nyame na ɔpra ne ho.",
+      "en": "For the animal without a tail, God brushes off the flies.",
+      "meaning": "God cares for the vulnerable.",
+      "review": "needs review"
+    },
+    {
+      "id": 24,
+      "twi": "Ahoɔfɛ ntua ka.",
+      "en": "Beauty does not pay debts.",
+      "meaning": "Character and hard work matter more than looks.",
+      "review": "needs review"
+    },
+    {
+      "id": 25,
+      "twi": "Woamma wo yɔnko antwa nkron a, wo nso worentwa du.",
+      "en": "If you don't let your neighbour reach nine, you will never reach ten.",
+      "meaning": "Help others rise, and you rise too.",
+      "review": "needs review"
+    },
+    {
+      "id": 26,
+      "twi": "Ɔwɔ aka me nti, mehunu sonsono a, misuro.",
+      "en": "Because a snake bit me, I fear even an earthworm.",
+      "meaning": "Once bitten, twice shy.",
+      "review": "needs review"
+    },
+    {
+      "id": 27,
+      "twi": "Anomaa antu a, ɔbua da.",
+      "en": "The bird that does not fly goes to bed hungry.",
+      "meaning": "No effort, no reward.",
+      "review": "needs review"
+    },
+    {
+      "id": 28,
+      "twi": "Tete wɔ bi ka, tete wɔ bi kyerɛ.",
+      "en": "The ancients have something to say and something to teach.",
+      "meaning": "Value the wisdom of tradition.",
+      "review": "needs review"
+    },
+    {
+      "id": 29,
+      "twi": "Abofra hunu ne nsa hohoro a, ɔne mpanimfoɔ didi.",
+      "en": "When a child learns to wash their hands, they eat with the elders.",
+      "meaning": "Good conduct earns respect.",
+      "review": "needs review"
+    },
+    {
+      "id": 30,
+      "twi": "Kwaterekwa se ɔbɛma wo ntoma a, tie ne din.",
+      "en": "When a naked man offers you cloth, listen to his name.",
+      "meaning": "Judge a promise by the one who makes it.",
+      "review": "needs review"
+    }
+  ]
+}

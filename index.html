@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nsem Cards</title>
+<meta name="description" content="Make Akan proverb and Adinkra cards for WhatsApp status. Free, fast, works on any phone.">
+<meta name="theme-color" content="#B4400F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23B4400F'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23F2B90C' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='2.5' fill='%23F2B90C'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/noto-serif-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/unbounded-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="loading" class="loading" role="status" aria-live="polite">
+  <div class="loading-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+  <p id="loading-text">Getting your fonts ready…</p>
+</div>
+
+<header class="top">
+  <h1 class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="5.6" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/></svg>Nsem Cards</h1>
+  <p class="tagline">Proverb &amp; Adinkra cards for your status</p>
+</header>
+
+<main class="layout">
+  <section class="stage" aria-label="Card preview">
+    <div class="preview">
+      <canvas id="card" width="1080" height="1920" role="img" aria-label="Card preview"></canvas>
+      <button id="play" class="play" type="button" hidden aria-label="Play animation preview">▶ Play</button>
+      <div id="rec" class="rec" hidden><span class="rec-dot"></span><span id="rec-text">Recording</span><span class="rec-bar"><span id="rec-fill"></span></span></div>
+    </div>
+    <div class="actionbar">
+      <button id="btn-main" class="btn primary" type="button">Download</button>
+      <button id="btn-share" class="btn secondary" type="button">Share</button>
+    </div>
+    <aside class="ad-slot" id="ad-slot" aria-label="Advertisement"><span>Advertisement</span></aside>
+  </section>
+
+  <div class="controls">
+    <section class="group" aria-labelledby="h-msg">
+      <h2 id="h-msg"><b>1</b> Message</h2>
+      <div class="seg" role="radiogroup" aria-label="Message type">
+        <label><input type="radio" name="source" value="proverb" checked><span>Proverb</span></label>
+        <label><input type="radio" name="source" value="custom"><span>My own words</span></label>
+      </div>
+      <div id="src-proverb">
+        <label class="field-label" for="proverb">Choose a proverb</label>
+        <div class="row">
+          <select id="proverb"></select>
+          <button id="shuffle" class="icon-btn" type="button" aria-label="Random proverb" title="Random proverb">⤮</button>
+        </div>
+        <p id="meaning" class="meaning"></p>
+      </div>
+      <div id="src-custom" hidden>
+        <label class="field-label" for="custom">Your message</label>
+        <textarea id="custom" rows="3" maxlength="160" placeholder="e.g. Afenhyia pa! Happy new year to you and yours."></textarea>
+        <label class="field-label" for="custom-sub">Small line (optional)</label>
+        <input id="custom-sub" type="text" maxlength="80" placeholder="e.g. From Ama &amp; family">
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="h-sym">
+      <h2 id="h-sym"><b>2</b> Adinkra symbol</h2>
+      <div id="symbols" class="symbols" role="radiogroup" aria-labelledby="h-sym"></div>
+      <p id="sym-meaning" class="meaning"></p>
+    </section>
+
+    <section class="group" aria-labelledby="h-theme">
+      <h2 id="h-theme"><b>3</b> Theme</h2>
+      <div id="themes" class="themes" role="radiogroup" aria-labelledby="h-theme"></div>
+    </section>
+
+    <section class="group" aria-labelledby="h-mode">
+      <h2 id="h-mode"><b>4</b> Format</h2>
+      <div class="seg" role="radiogroup" aria-label="Format">
+        <label><input type="radio" name="mode" value="static" checked><span>Picture</span></label>
+        <label><input type="radio" name="mode" value="video"><span>Animated video</span></label>
+      </div>
+      <div id="video-warn" class="warn" hidden>
+        <strong>Heads up:</strong> video uses more battery and data than a picture. A 6-second video is about 2–4&nbsp;MB. Keep this screen open while it records.
+      </div>
+      <p id="video-unsupported" class="warn" hidden>Video recording isn't supported in this browser. Try Chrome on Android, or use Picture.</p>
+    </section>
+
+    <footer class="foot">
+      <p>Proverb spellings are waiting for review by a Twi speaker. Spotted a mistake? Let us know.</p>
+      <p><a href="CREDITS.md">Credits &amp; licences</a></p>
+    </footer>
+  </div>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="symbols.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
